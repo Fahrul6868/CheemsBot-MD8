@@ -236,10 +236,6 @@ XeonLft = await getBuffer(ppuser)
 └┬❖ 「  @${xeonName.split("@")[0]}  」
    │✑  𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 
    │✑  ${metadata.subject}
-   │✑  𝗠𝗲𝗺𝗯𝗲𝗿 : 
-   │✑ ${xmembers}th
-   │✑  𝗝𝗼𝗶𝗻𝗲𝗱 : 
-   │✑ ${xtime} ${xdate}
    └───────────────┈ ⳹`
 XeonBotInc.sendMessage(anu.id,
  { text: xeonbody,
@@ -264,10 +260,6 @@ XeonBotInc.sendMessage(anu.id,
 └┬❖ 「 @${xeonName.split("@")[0]}  」
    │✑  𝗟𝗲𝗳𝘁 
    │✑ ${metadata.subject}
-   │✑  𝗠𝗲𝗺𝗯𝗲𝗿 : 
-   │✑ ${xeonmembers}th
-   │✑  𝗧𝗶𝗺𝗲 : 
-   │✑  ${xeontime} ${xeondate}
    └───────────────┈ ⳹`
 XeonBotInc.sendMessage(anu.id,
  { text: xeonbody,
