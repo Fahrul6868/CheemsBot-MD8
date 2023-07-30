@@ -167,39 +167,39 @@ console.log(err)}})
 			try {
 ppgroup = await XeonBotInc.profilePictureUrl(anu.id, 'image')
 } catch (err) {
-ppgroup = 'https://i.ibb.co/RBx5SQC/avatar-group-large-v2.png?q=60'
+ppgroup = '-'
 }
 			console.log(json)
 			const res = json[0];
 			if (res.announce == true) {
 				await sleep(2000)
 				XeonBotInc.sendMessage(res.id, {
-					text: `「 Group Settings Change 」\n\nGroup has been closed by admin, Now only admins can send messages !`,
+					text: `-`,
 				});
 			} else if (res.announce == false) {
 				await sleep(2000)
 				XeonBotInc.sendMessage(res.id, {
-					text: `「 Group Settings Change 」\n\nThe group has been opened by admin, Now participants can send messages !`,
+					text: `-`,
 				});
 			} else if (res.restrict == true) {
 				await sleep(2000)
 				XeonBotInc.sendMessage(res.id, {
-					text: `「 Group Settings Change 」\n\nGroup info has been restricted, Now only admin can edit group info !`,
+					text: `-`,
 				});
 			} else if (res.restrict == false) {
 				await sleep(2000)
 				XeonBotInc.sendMessage(res.id, {
-					text: `「 Group Settings Change 」\n\nGroup info has been opened, Now participants can edit group info !`,
+					text: `-`,
 				});
 			} else if(!res.desc == ''){
 				await sleep(2000)
 				XeonBotInc.sendMessage(res.id, { 
-					text: `「 Group Settings Change 」\n\n*Group description has been changed to*\n\n${res.desc}`,
+					text: `-`,
 				});
       } else {
 				await sleep(2000)
 				XeonBotInc.sendMessage(res.id, {
-					text: `「 Group Settings Change 」\n\n*Group name has been changed to*\n\n*${res.subject}*`,
+					text: `-`,
 				});
 			} 
 			
@@ -214,12 +214,12 @@ for (let num of participants) {
 try {
 ppuser = await XeonBotInc.profilePictureUrl(num, 'image')
 } catch (err) {
-ppuser = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60'
+ppuser = '-'
 }
 try {
 ppgroup = await XeonBotInc.profilePictureUrl(anu.id, 'image')
 } catch (err) {
-ppgroup = 'https://i.ibb.co/RBx5SQC/avatar-group-large-v2.png?q=60'
+ppgroup = '-'
 }
 //welcome\\
 memb = metadata.participants.length
@@ -231,12 +231,7 @@ XeonLft = await getBuffer(ppuser)
                 const xtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
 	            const xdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
 	            const xmembers = metadata.participants.length
-                xeonbody = `┌─❖
-│「 𝗛𝗶 👋 」
-└┬❖ 「  @${xeonName.split("@")[0]}  」
-   │✑  𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 
-   │✑  ${metadata.subject}
-   └───────────────┈ ⳹`
+                xeonbody = `-`
 XeonBotInc.sendMessage(anu.id,
  { text: xeonbody,
  contextInfo:{
@@ -255,12 +250,7 @@ XeonBotInc.sendMessage(anu.id,
 	                const xeondate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
                 	let xeonName = num
                     const xeonmembers = metadata.participants.length
-                    xeonbody = `┌─❖
-│「 𝗚𝗼𝗼𝗱𝗯𝘆𝗲 👋 」
-└┬❖ 「 @${xeonName.split("@")[0]}  」
-   │✑  𝗟𝗲𝗳𝘁 
-   │✑ ${metadata.subject}
-   └───────────────┈ ⳹`
+                    xeonbody = `-`
 XeonBotInc.sendMessage(anu.id,
  { text: xeonbody,
  contextInfo:{
@@ -278,7 +268,7 @@ const xeonbuffer = await getBuffer(ppuser)
 const xeontime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
 const xeondate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
 let xeonName = num
-xeonbody = ` 𝗖𝗼𝗻𝗴𝗿𝗮𝘁𝘀🎉 @${xeonName.split("@")[0]}, you have been *promoted* to *admin* 🥳`
+xeonbody = ` -`
    XeonBotInc.sendMessage(anu.id,
  { text: xeonbody,
  contextInfo:{
